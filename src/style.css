@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================================
+ * WARNA CUSTOM
+ * ----------------------------------------------------------------------------
+ * Ini setara dengan komponen GlobalStyles di versi React sebelumnya.
+ * Karena project ini pakai Tailwind versi sungguhan (dengan compiler),
+ * sebenarnya kelas arbitrary seperti bg-[#d02b2b] SUDAH bisa langsung
+ * dipakai. Tapi supaya konsisten dengan nama kelas yang dipakai di semua
+ * komponen .vue (bg-brand, text-muted, dst), warnanya didefinisikan di sini.
+ * ==========================================================================*/
+
+@layer utilities {
+  .bg-app {
+    background-color: #f2f2f2;
+  }
+  .text-ink {
+    color: #1d1d1f;
+  }
+  .text-brand {
+    color: #c81e1e;
+  }
+  .bg-brand {
+    background-color: #d02b2b;
+  }
+  .hover\:bg-brand-dark:hover {
+    background-color: #b82424;
+  }
+  .text-slate {
+    color: #3a3a3c;
+  }
+  .text-muted {
+    color: #8a8a8e;
+  }
+  .bg-accent {
+    background-color: #2f6fed;
+  }
+  .hover\:bg-accent-dark:hover {
+    background-color: #265ecb;
+  }
+  .focus\:border-accent:focus {
+    border-color: #2f6fed;
+  }
+  .bg-danger {
+    background-color: #e02020;
+  }
+  .text-danger {
+    color: #e02020;
+  }
+  .bg-success {
+    background-color: #2e9e5b;
+  }
+  .bg-success-light {
+    background-color: #eafaf0;
+  }
+  .text-success-dark {
+    color: #1f7a44;
+  }
+  .bg-soft {
+    background-color: #f6f6f7;
+  }
+  .hover\:bg-soft-dark:hover {
+    background-color: #eeeeef;
+  }
+  .text-gray-mid {
+    color: #6b6b6f;
+  }
+  .bg-header-gray {
+    background-color: #ececec;
+  }
+  .border-line {
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+  .border-line-light {
+    border-color: rgba(0, 0, 0, 0.05);
+  }
+  .hover\:bg-hover-light:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  .text-white-85 {
+    color: rgba(255, 255, 255, 0.85);
+  }
+  .text-white-75 {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  .min-h-app {
+    min-height: 760px;
+  }
+  .h-chart {
+    height: 240px;
+  }
+}
