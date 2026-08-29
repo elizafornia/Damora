@@ -14,7 +14,9 @@
 -->
 
 <template>
-  <div class="flex h-full min-h-app w-full bg-app font-sans text-ink">
+  <LoginView v-if="!authState.currentUser" />
+
+  <div v-else class="flex h-full min-h-app w-full bg-app font-sans text-ink">
     <Sidebar :halaman-aktif="halamanAktif" @pindah-halaman="pindahHalaman" />
 
     <div class="flex min-w-0 flex-1 flex-col">
@@ -55,12 +57,14 @@
 import { ref, computed } from "vue";
 import Sidebar from "./components/Sidebar.vue";
 import Topbar from "./components/Topbar.vue";
+import LoginView from "./components/LoginView.vue";
 import HalamanDashboard from "./components/HalamanDashboard.vue";
 import HalamanInput from "./components/HalamanInput.vue";
 import HalamanTaskList from "./components/HalamanTaskList.vue";
 import HalamanStatusUpdate from "./components/HalamanStatusUpdate.vue";
 import HalamanTeam from "./components/HalamanTeam.vue";
 import { contohTugasAwal } from "./data";
+import { authState } from "./store/auth";
 
 // Halaman mana yang lagi aktif: "dashboard", "input", "tasklist", atau "team"
 const halamanAktif = ref("dashboard");

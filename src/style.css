@@ -46,6 +46,9 @@
   .bg-danger {
     background-color: #e02020;
   }
+  .bg-danger-light {
+    background-color: #fdecec;
+  }
   .text-danger {
     color: #e02020;
   }

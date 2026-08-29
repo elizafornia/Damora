@@ -64,7 +64,7 @@
 import { computed } from "vue";
 import { ListChecks, UserRound } from "lucide-vue-next";
 import WeeklyBarChart from "./WeeklyBarChart.vue";
-import { currentUser } from "../data";
+import { authState } from "../store/auth";
 import {
   hitungTotalBulanIni,
   hitungTodo,
@@ -79,6 +79,6 @@ const props = defineProps({
 
 const totalBulanIni = computed(() => hitungTotalBulanIni(props.tasks));
 const jumlahTodo = computed(() => hitungTodo(props.tasks));
-const dataMingguan = computed(() => hitungDataMingguan(props.tasks, currentUser));
-const tugasTerbaru = computed(() => ambilTugasTerbaru(props.tasks, currentUser, 3));
+const dataMingguan = computed(() => hitungDataMingguan(props.tasks, authState.currentUser));
+const tugasTerbaru = computed(() => ambilTugasTerbaru(props.tasks, authState.currentUser, 3));
 </script>

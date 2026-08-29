@@ -83,7 +83,7 @@
       <label class="mb-1.5 block text-sm text-slate">PIC</label>
       <div class="flex w-fit items-center gap-2 rounded-lg bg-soft px-3 py-2 text-sm text-gray-mid">
         <UserRound :size="14" />
-        {{ currentUser.name }} (Otomatis)
+        {{ authState.currentUser.name }} (Otomatis)
       </div>
     </div>
   </div>
@@ -92,7 +92,8 @@
 <script setup>
 import { computed } from "vue";
 import { Trash2, UserRound } from "lucide-vue-next";
-import { currentUser, JENIS_PEKERJAAN_OPTIONS, STATUS_OPTIONS, KETERANGAN_MAX_LENGTH } from "../data";
+import { JENIS_PEKERJAAN_OPTIONS, STATUS_OPTIONS, KETERANGAN_MAX_LENGTH } from "../data";
+import { authState } from "../store/auth";
 
 const props = defineProps({
   baris: { type: Object, required: true },
