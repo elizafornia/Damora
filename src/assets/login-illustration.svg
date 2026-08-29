@@ -1,0 +1,65 @@
+<svg viewBox="0 0 520 480" xmlns="http://www.w3.org/2000/svg">
+  <!-- bayangan lantai -->
+  <ellipse cx="260" cy="446" rx="190" ry="22" fill="#eeeeef" />
+
+  <!-- tumpukan panel dashboard -->
+  <rect x="70" y="55" width="260" height="330" rx="18" fill="#fbdcdc" />
+  <rect x="150" y="105" width="260" height="310" rx="18" fill="#f6b9b9" />
+  <rect x="108" y="148" width="234" height="238" rx="16" fill="#ffffff" stroke="#eeb8b8" stroke-width="2" />
+
+  <!-- bubble chat kecil -->
+  <rect x="86" y="24" width="36" height="26" rx="7" fill="#ffffff" stroke="#d02b2b" stroke-width="2" />
+  <path d="M96 50 l-6 10 v-10 z" fill="#ffffff" stroke="#d02b2b" stroke-width="2" />
+  <rect x="128" y="14" width="36" height="26" rx="7" fill="#ffffff" stroke="#d02b2b" stroke-width="2" />
+  <path d="M138 40 l-6 10 v-10 z" fill="#ffffff" stroke="#d02b2b" stroke-width="2" />
+
+  <!-- ikon gear kecil -->
+  <circle cx="298" cy="70" r="10" fill="none" stroke="#e58f8f" stroke-width="3" />
+  <circle cx="298" cy="70" r="3" fill="#e58f8f" />
+  <circle cx="322" cy="76" r="8" fill="none" stroke="#e58f8f" stroke-width="3" />
+  <circle cx="322" cy="76" r="2.5" fill="#e58f8f" />
+
+  <!-- checklist rows -->
+  <g stroke="#e6a3a3" stroke-width="4" stroke-linecap="round">
+    <line x1="132" y1="180" x2="196" y2="180" />
+    <line x1="132" y1="196" x2="182" y2="196" />
+  </g>
+  <rect x="132" y="212" width="14" height="14" rx="3" fill="none" stroke="#d02b2b" stroke-width="2" />
+  <path d="M135 219 l3 3 l6 -7" fill="none" stroke="#d02b2b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="132" y="234" width="14" height="14" rx="3" fill="none" stroke="#d02b2b" stroke-width="2" />
+  <path d="M135 241 l3 3 l6 -7" fill="none" stroke="#d02b2b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- donut chart -->
+  <circle cx="290" cy="205" r="36" fill="none" stroke="#f6d2d2" stroke-width="13" />
+  <path d="M290 169 A36 36 0 0 1 322 218" fill="none" stroke="#d02b2b" stroke-width="13" stroke-linecap="round" />
+
+  <!-- bar chart -->
+  <g>
+    <rect x="150" y="320" width="18" height="46" rx="4" fill="#d02b2b" />
+    <rect x="178" y="298" width="18" height="68" rx="4" fill="#ea8484" />
+    <rect x="206" y="278" width="18" height="88" rx="4" fill="#d02b2b" />
+    <rect x="234" y="306" width="18" height="60" rx="4" fill="#ea8484" />
+    <rect x="262" y="288" width="18" height="78" rx="4" fill="#d02b2b" />
+  </g>
+  <line x1="146" y1="368" x2="286" y2="368" stroke="#f0d3d3" stroke-width="2" />
+
+  <!-- figur orang 1: berdiri sambil bawa folder -->
+  <g>
+    <ellipse cx="76" cy="452" rx="30" ry="8" fill="#e5e5e6" />
+    <circle cx="74" cy="330" r="16" fill="#3a3a3c" />
+    <path d="M52 350 q22 -14 44 0 l4 76 q-26 12 -52 0 z" fill="#1d1d1f" />
+    <rect x="52" y="420" width="15" height="52" rx="6" fill="#8a1f1f" />
+    <rect x="82" y="420" width="15" height="52" rx="6" fill="#8a1f1f" />
+    <rect x="30" y="366" width="28" height="36" rx="4" fill="#d02b2b" transform="rotate(-8 44 384)" />
+  </g>
+
+  <!-- figur orang 2: berinteraksi dengan panel -->
+  <g>
+    <ellipse cx="366" cy="452" rx="30" ry="8" fill="#e5e5e6" />
+    <circle cx="362" cy="298" r="15" fill="#3a3a3c" />
+    <path d="M340 318 q22 -15 44 0 l3 84 q-25 13 -50 0 z" fill="#d02b2b" />
+    <rect x="342" y="398" width="15" height="54" rx="6" fill="#2b2b2d" />
+    <rect x="370" y="398" width="15" height="54" rx="6" fill="#2b2b2d" />
+    <path d="M382 328 q26 -6 34 -30" fill="none" stroke="#3a3a3c" stroke-width="10" stroke-linecap="round" />
+  </g>
+</svg>

@@ -53,7 +53,8 @@
 import { ref } from "vue";
 import { PlusCircle, CheckCircle2 } from "lucide-vue-next";
 import BarisFormInput from "./BarisFormInput.vue";
-import { currentUser, JENIS_PEKERJAAN_OPTIONS, STATUS_OPTIONS } from "../data";
+import { JENIS_PEKERJAAN_OPTIONS, STATUS_OPTIONS } from "../data";
+import { authState } from "../store/auth";
 
 const emit = defineEmits(["simpan", "lihat-dashboard"]);
 
@@ -109,8 +110,8 @@ function handleSimpan() {
     status: baris.status,
     keterangan: baris.keterangan,
     tanggal: baris.tanggal,
-    executorId: currentUser.id,
-    executorName: currentUser.name,
+    executorId: authState.currentUser.id,
+    executorName: authState.currentUser.name,
     dibuatPada: sekarang,
   }));
 

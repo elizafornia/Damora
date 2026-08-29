@@ -1,12 +1,18 @@
 // ---------------------------------------------------------------------------
-// DATA "USER YANG SEDANG LOGIN"
-// Di aplikasi asli ini akan datang dari AuthService / hasil login.
+// DAFTAR USER UNTUK LOGIN (MOCK / DUMMY)
+// ----------------------------------------------------------------------------
+// Ini belum terhubung ke backend/database sungguhan. Username & password
+// dicek langsung dari daftar ini (lihat src/store/auth.js). Nanti kalau
+// sudah ada API login sungguhan, bagian ini tinggal diganti dengan
+// pemanggilan API tersebut.
 // ---------------------------------------------------------------------------
-export const currentUser = {
-  id: "u1",
-  name: "Eliza Vornia",
-  role: "admin", // "admin" atau "member"
-};
+export const MOCK_USERS = [
+  { id: "u1", name: "Eliza Vornia", email: "eliza@damora.com", password: "eliza123", role: "admin" },
+  { id: "u2", name: "Rani", email: "rani@damora.com", password: "rani123", role: "member" },
+  { id: "u3", name: "Dion", email: "dion@damora.com", password: "dion123", role: "member" },
+  { id: "u4", name: "Faisal", email: "faisal@damora.com", password: "faisal123", role: "member" },
+  { id: "u5", name: "Arini", email: "arini@damora.com", password: "arini123", role: "member" },
+];
 
 // Pilihan untuk dropdown "Jenis Pekerjaan".
 export const JENIS_PEKERJAAN_OPTIONS = ["WIFI", "Kabel Fiber", "Modem/ONT", "Lainnya"];
