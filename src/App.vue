@@ -20,10 +20,10 @@
     <Sidebar :halaman-aktif="halamanAktif" @pindah-halaman="pindahHalaman" />
 
     <div class="flex min-w-0 flex-1 flex-col">
-      <Topbar />
+      <Topbar @pindah-halaman="pindahHalaman" />
 
-      <main class="flex-1 overflow-y-auto px-8 py-7">
-        <div class="mx-auto max-w-5xl rounded-2xl bg-white p-8 shadow-sm">
+      <main class="flex-1 overflow-y-auto px-4 py-4">
+        <div class="w-full rounded-2xl bg-white p-8 shadow-sm">
           <HalamanDashboard v-if="halamanAktif === 'dashboard'" :tasks="tasks" />
 
           <HalamanInput
@@ -47,6 +47,8 @@
           </template>
 
           <HalamanTeam v-else-if="halamanAktif === 'team'" :tasks="tasks" />
+
+          <HalamanProfile v-else-if="halamanAktif === 'profile'" />
         </div>
       </main>
     </div>
@@ -63,6 +65,7 @@ import HalamanInput from "./components/HalamanInput.vue";
 import HalamanTaskList from "./components/HalamanTaskList.vue";
 import HalamanStatusUpdate from "./components/HalamanStatusUpdate.vue";
 import HalamanTeam from "./components/HalamanTeam.vue";
+import HalamanProfile from "./components/HalamanProfile.vue";
 import { contohTugasAwal } from "./data";
 import { authState } from "./store/auth";
 

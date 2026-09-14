@@ -7,13 +7,20 @@
 
     <div class="mb-3 flex items-center justify-between">
       <h2 class="text-lg font-bold">Anggota Tim</h2>
-      <button
-        @click="unduhRekapTimSebagaiCSV(rekapTim)"
-        class="flex items-center gap-2 rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white hover:bg-brand-dark"
-      >
-        <Download :size="16" />
-        Export
-      </button>
+      <div class="flex items-center gap-3">
+        <input
+          type="month"
+          v-model="bulanTerpilih"
+          class="rounded-lg border border-line px-3 py-2 text-sm text-ink focus:outline-none focus:border-accent"
+        />
+        <button
+          @click="unduhRekapTimSebagaiCSV(rekapTim)"
+          class="flex items-center gap-2 rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white hover:bg-brand-dark"
+        >
+          <Download :size="16" />
+          Export
+        </button>
+      </div>
     </div>
 
     <div class="overflow-hidden rounded-xl border border-line">
@@ -44,7 +51,7 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
+import { ref, computed } from "vue";
 import { Download } from "lucide-vue-next";
 import { TIM_ANGGOTA } from "../data";
 import { hitungRekapTim, unduhRekapTimSebagaiCSV } from "../utils";
@@ -53,5 +60,22 @@ const props = defineProps({
   tasks: { type: Array, required: true },
 });
 
-const rekapTim = computed(() => hitungRekapTim(props.tasks, TIM_ANGGOTA));
+// Default: bulan berjalan (format input type="month" adalah "YYYY-MM").
+function bulanIniSebagaiString() {
+  const sekarang = new Date();
+  const tahun = sekarang.getFullYear();
+  const bulan = String(sekarang.getMonth() + 1).padStart(2, "0");
+  return `${tahun}-${bulan}`;
+}
+
+const bulanTerpilih = ref(bulanIniSebagaiString());
+
+// Hanya tampilkan tugas yang tanggalnya berada di bulan+tahun yang dipilih
+// pada month picker. Format `tugas.tanggal` adalah "YYYY-MM-DD", jadi
+// cukup dibandingkan 7 karakter pertamanya ("YYYY-MM").
+const tasksBulanTerpilih = computed(() =>
+  props.tasks.filter((tugas) => tugas.tanggal.slice(0, 7) === bulanTerpilih.value)
+);
+
+const rekapTim = computed(() => hitungRekapTim(tasksBulanTerpilih.value, TIM_ANGGOTA));
 </script>

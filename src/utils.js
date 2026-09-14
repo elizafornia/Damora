@@ -39,7 +39,7 @@ export function hitungTodo(daftarTugas) {
 // Data untuk grafik mingguan (Senin - Minggu).
 // Admin -> hitung semua orang. Member -> hitung punya dia sendiri saja.
 export function hitungDataMingguan(daftarTugas, user) {
-  const namaHari = ["Sen", "Sel", "Rab", "Kam", "Jum", "Sab", "Min"];
+  const namaHari = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
   const hariIni = new Date();
 
   const jarakDariSenin = (hariIni.getDay() + 6) % 7;
