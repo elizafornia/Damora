@@ -16,11 +16,21 @@
         <ChevronDown :size="14" class="text-muted" />
       </button>
 
-      <!-- Dropdown kecil, cuma berisi tombol Logout -->
+      <!-- Dropdown kecil: Profile dan Logout -->
       <div
         v-if="menuTerbuka"
-        class="absolute right-0 top-full z-10 mt-2 w-40 rounded-lg border border-line-light bg-white py-1.5 shadow-md"
+        class="absolute right-0 top-full z-10 mt-2 w-44 rounded-lg border border-line-light bg-white py-1.5 shadow-md"
       >
+        <button
+          @click="handleProfile"
+          class="flex w-full items-center gap-2 px-3 py-2 text-left text-sm text-ink hover:bg-hover-light"
+        >
+          <UserRound :size="14" />
+          Profile
+        </button>
+
+        <div class="my-1 border-t border-line-light"></div>
+
         <button
           @click="handleLogout"
           class="flex w-full items-center gap-2 px-3 py-2 text-left text-sm text-danger hover:bg-hover-light"
@@ -35,10 +45,17 @@
 
 <script setup>
 import { ref } from "vue";
-import { Bell, ChevronDown, LogOut } from "lucide-vue-next";
+import { Bell, ChevronDown, LogOut, UserRound } from "lucide-vue-next";
 import { authState, logout } from "../store/auth";
 
+const emit = defineEmits(["pindah-halaman"]);
+
 const menuTerbuka = ref(false);
+
+function handleProfile() {
+  menuTerbuka.value = false;
+  emit("pindah-halaman", "profile");
+}
 
 function handleLogout() {
   menuTerbuka.value = false;
