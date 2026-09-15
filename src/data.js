@@ -1,9 +1,9 @@
 // ---------------------------------------------------------------------------
 // DAFTAR USER UNTUK LOGIN (MOCK / DUMMY)
 // ----------------------------------------------------------------------------
-// Ini belum terhubung ke backend/database sungguhan. Username & password
-// dicek langsung dari daftar ini (lihat src/store/auth.js). Nanti kalau
-// sudah ada API login sungguhan, bagian ini tinggal diganti dengan
+// Ini belum terhubung ke backend/database. Username & password
+// dicek langsung dari daftar ini (lihat src/store/auth.js). 
+// Kalau sudah integrate API login sungguhan, bagian ini tinggal diganti dengan
 // pemanggilan API tersebut.
 // ---------------------------------------------------------------------------
 export const MOCK_USERS = [
@@ -58,6 +58,6 @@ export const TIM_ANGGOTA = [
   { id: "u1", nama: "Eliza", tim: "Data Management" },
   { id: "u2", nama: "Rani", tim: "Data Management" },
   { id: "u3", nama: "Dion", tim: "Data Management" },
-  { id: "u4", nama: "Faisal", tim: "Teknisi" },
-  { id: "u5", nama: "Arini", tim: "Teknisi" },
+  { id: "u4", nama: "Faisal", tim: "Data Management" },
+  { id: "u5", nama: "Arini", tim: "Data Management" },
 ];
