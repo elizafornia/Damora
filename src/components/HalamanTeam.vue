@@ -8,11 +8,7 @@
     <div class="mb-3 flex items-center justify-between">
       <h2 class="text-lg font-bold">Anggota Tim</h2>
       <div class="flex items-center gap-3">
-        <input
-          type="month"
-          v-model="bulanTerpilih"
-          class="rounded-lg border border-line px-3 py-2 text-sm text-ink focus:outline-none focus:border-accent"
-        />
+        <MonthPicker v-model="bulanTerpilih" />
         <button
           @click="unduhRekapTimSebagaiCSV(rekapTim)"
           class="flex items-center gap-2 rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white hover:bg-brand-dark"
@@ -55,6 +51,7 @@ import { ref, computed } from "vue";
 import { Download } from "lucide-vue-next";
 import { TIM_ANGGOTA } from "../data";
 import { hitungRekapTim, unduhRekapTimSebagaiCSV } from "../utils";
+import MonthPicker from "./MonthPicker.vue";
 
 const props = defineProps({
   tasks: { type: Array, required: true },
