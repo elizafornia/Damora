@@ -58,6 +58,6 @@ export const TIM_ANGGOTA = [
   { id: "u1", nama: "Eliza", tim: "Data Management" },
   { id: "u2", nama: "Rani", tim: "Data Management" },
   { id: "u3", nama: "Dion", tim: "Data Management" },
-  { id: "u4", nama: "Faisal", tim: "Teknisi" },
-  { id: "u5", nama: "Arini", tim: "Teknisi" },
+  { id: "u4", nama: "Faisal", tim: "Data Management" },
+  { id: "u5", nama: "Arini", tim: "Data Management" },
 ];
