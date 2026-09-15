@@ -1,9 +1,9 @@
 // ---------------------------------------------------------------------------
 // DAFTAR USER UNTUK LOGIN (MOCK / DUMMY)
 // ----------------------------------------------------------------------------
-// Ini belum terhubung ke backend/database sungguhan. Username & password
-// dicek langsung dari daftar ini (lihat src/store/auth.js). Nanti kalau
-// sudah ada API login sungguhan, bagian ini tinggal diganti dengan
+// Ini belum terhubung ke backend/database. Username & password
+// dicek langsung dari daftar ini (lihat src/store/auth.js). 
+// Kalau sudah integrate API login sungguhan, bagian ini tinggal diganti dengan
 // pemanggilan API tersebut.
 // ---------------------------------------------------------------------------
 export const MOCK_USERS = [
